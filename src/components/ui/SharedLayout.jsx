@@ -1,7 +1,7 @@
 import Footer from './Footer';
 import Header from './Header';
-import Wrapper from './Wrappers/SharedLayoutWrapper';
 import { Outlet } from 'react-router-dom';
+import styled from 'styled-components';
 
 const SharedLayout = () => {
 	return (
@@ -12,5 +12,7 @@ const SharedLayout = () => {
 		</Wrapper>
 	);
 };
+
+const Wrapper = styled.div``;
 
 export default SharedLayout;

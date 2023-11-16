@@ -7,27 +7,27 @@ const pages = [
 	{
 		name: 'web-design',
 		path: '/web-design',
-		elementName: 'home-page',
+		elementName: 'web-design-page',
 	},
 	{
 		name: 'app-design',
 		path: '/app-design',
-		elementName: 'home-page',
+		elementName: 'app-design-page',
 	},
 	{
 		name: 'graphic-design',
 		path: '/graphic-design',
-		elementName: 'home-page',
+		elementName: 'graphic-design-page',
 	},
 	{
 		name: 'about',
 		path: '/about',
-		elementName: 'home-page',
+		elementName: 'about-page',
 	},
 	{
 		name: 'locations',
 		path: '/locations',
-		elementName: 'home-page',
+		elementName: 'locations-page',
 	},
 	{
 		name: 'contact',
