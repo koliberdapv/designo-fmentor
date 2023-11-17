@@ -20,6 +20,7 @@ const Wrapper = styled.dialog`
 	background-color: var(--clr-black);
 	padding: 3rem 0;
 	border: none;
+	transition: 200ms all ease-in-out;
 	ul {
 		flex-direction: column;
 		align-items: flex-start;

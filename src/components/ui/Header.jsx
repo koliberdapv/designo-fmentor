@@ -1,19 +1,11 @@
 import styled from 'styled-components';
 import close from '../../assets/shared/mobile/icon-close.svg';
 import hamburger from '../../assets/shared/mobile/icon-hamburger.svg';
-import toggleSidebar from '../../utils/toggleSidebar';
-import { useEffect, useState } from 'react';
 import { Logo, Navigation, Sidebar } from './';
+import { useGlobalContext } from '../../context/context';
 
 const Header = () => {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-	const handleClick = () => {
-		setIsSidebarOpen(!isSidebarOpen);
-	};
-
-	useEffect(() => {
-		toggleSidebar(isSidebarOpen);
-	}, [isSidebarOpen]);
+	const { handleMenuBtnClick, isSidebarOpen } = useGlobalContext();
 
 	return (
 		<Wrapper>
@@ -26,7 +18,7 @@ const Header = () => {
 					<button
 						type="button"
 						className="menu-btn"
-						onClick={handleClick}
+						onClick={handleMenuBtnClick}
 					>
 						<img
 							src={isSidebarOpen ? close : hamburger}

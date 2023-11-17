@@ -7,58 +7,58 @@ import youtube from '../../assets/shared/desktop/icon-youtube.svg';
 import { Link } from 'react-router-dom';
 
 const Socials = () => {
+	const socials = [
+		{
+			id: 1,
+			name: 'Facebook',
+			icon: facebook,
+			link: 'https://www.facebook.com',
+		},
+		{
+			id: 2,
+			name: 'Youtube',
+			icon: youtube,
+			link: 'https://www.youtube.com',
+		},
+		{
+			id: 3,
+			name: 'Twitter',
+			icon: twitter,
+			link: 'https://www.twitter.com',
+		},
+		{
+			id: 4,
+			name: 'Pinterest',
+			icon: pinterest,
+			link: 'https://www.pinterest.com',
+		},
+		{
+			id: 5,
+			name: 'Instagram',
+			icon: instagram,
+			link: 'https://www.instagram.com',
+		},
+	];
 	return (
 		<Wrapper>
-			<li>
-				<Link to="https://www.facebook.com">
-					<div className="img-container">
-						<img
-							src={facebook}
-							alt="Facebook"
-						/>
-					</div>
-				</Link>
-			</li>
-			<li>
-				<Link to="https://www.youtube.com">
-					<div className="img-container">
-						<img
-							src={youtube}
-							alt="Youtube"
-						/>
-					</div>
-				</Link>
-			</li>
-			<li>
-				<Link to="https://www.twitter.com">
-					<div className="img-container">
-						<img
-							src={twitter}
-							alt="Twitter"
-						/>
-					</div>
-				</Link>
-			</li>
-			<li>
-				<Link to="https://www.pinterest.com">
-					<div className="img-container">
-						<img
-							src={pinterest}
-							alt="Pinterest"
-						/>
-					</div>
-				</Link>
-			</li>
-			<li>
-				<Link to="https://www.instagram.com">
-					<div className="img-container">
-						<img
-							src={instagram}
-							alt="Instagram"
-						/>
-					</div>
-				</Link>
-			</li>
+			{socials.map((social) => {
+				const { id, name, icon, link } = social;
+				return (
+					<li key={id}>
+						<Link
+							to={link}
+							target="_blank"
+						>
+							<div className="img-container">
+								<img
+									src={icon}
+									alt={name}
+								/>
+							</div>
+						</Link>
+					</li>
+				);
+			})}
 		</Wrapper>
 	);
 };

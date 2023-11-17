@@ -5,7 +5,7 @@ import logo_dark from '../../assets/shared/desktop/logo-dark.png';
 const Logo = ({ isDark }) => {
 	return (
 		<Wrapper className="logo">
-			<Link to="/home">
+			<Link to="/">
 				<div className="img-container">
 					<img
 						src={isDark ? logo_dark : logo_light}
