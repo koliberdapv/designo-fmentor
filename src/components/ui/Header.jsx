@@ -1,35 +1,40 @@
 import styled from 'styled-components';
-import Logo from './Logo';
+import close from '../../assets/shared/mobile/icon-close.svg';
 import hamburger from '../../assets/shared/mobile/icon-hamburger.svg';
+import toggleSidebar from '../../utils/toggleSidebar';
+import { useEffect, useState } from 'react';
+import { Logo, Navigation, Sidebar } from './';
+
 const Header = () => {
+	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+	const handleClick = () => {
+		setIsSidebarOpen(!isSidebarOpen);
+	};
+
+	useEffect(() => {
+		toggleSidebar(isSidebarOpen);
+	}, [isSidebarOpen]);
+
 	return (
 		<Wrapper>
 			<div className="width-controller">
 				<section className="header-content">
 					<Logo isDark={true} />
-					<article className="header-content__menu">
-						<ul>
-							<li>
-								<a href="/">our company</a>
-							</li>
-							<li>
-								<a href="/">locations</a>
-							</li>
-							<li>
-								<a href="/">contact</a>
-							</li>
-						</ul>
+					<article className="header-content__nav">
+						<Navigation />
 					</article>
 					<button
 						type="button"
 						className="menu-btn"
+						onClick={handleClick}
 					>
 						<img
-							src={hamburger}
+							src={isSidebarOpen ? close : hamburger}
 							alt="Menu"
 						/>
 					</button>
 				</section>
+				<Sidebar />
 			</div>
 		</Wrapper>
 	);
@@ -41,6 +46,7 @@ const Wrapper = styled.header`
 		align-items: center;
 		justify-content: space-between;
 		padding: 2.18rem 0;
+		position: relative;
 	}
 	.menu-btn {
 		display: none;
@@ -50,12 +56,12 @@ const Wrapper = styled.header`
 		padding: 1rem;
 		margin: -1rem;
 	}
-	.header-content__menu ul {
-		display: flex;
-	}
-	@media (max-width: 768px) {
+	@media (width < 768px) {
 		.menu-btn {
-			display: block;
+			display: grid;
+		}
+		.header-content__nav {
+			display: none;
 		}
 	}
 `;

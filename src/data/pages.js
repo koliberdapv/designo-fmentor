@@ -21,7 +21,7 @@ const pages = [
 	},
 	{
 		name: 'about',
-		path: '/about',
+		path: '/about-us',
 		elementName: 'about-page',
 	},
 	{

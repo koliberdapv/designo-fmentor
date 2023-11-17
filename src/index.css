@@ -22,11 +22,14 @@
 	--fs-h1: 48px;
 	--fs-h2: 40px;
 	--fs-h3: 20px;
+	--fs-title: 24px;
 	--fs-p: 16px;
 	--fs-btn-p: 15px;
+	--fs-small: 14px;
 
-	--fw-500: 500;
 	--fw-400: 400;
+	--fw-500: 500;
+	--fw-700: 700;
 
 	--lh-h1: 48px;
 	--lh-h3: 26px;
@@ -98,9 +101,14 @@ p {
 	display: none;
 }
 .width-controller {
-	max-width: 1440px;
+	max-width: calc(1111px + 5.25rem);
 	margin: 0 auto;
 	padding: 0 1.5rem;
+}
+@media screen and (width > 768px) {
+	.width-controller {
+		padding: 0 2.625rem;
+	}
 }
 .img-container {
 	width: 100%;
@@ -109,5 +117,14 @@ p {
 }
 img {
 	width: 100%;
-	/* height: 100%; */
+}
+a {
+	color: var(--clr-black);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: var(--spacing-h2);
+	font-size: var(--fs-small);
+}
+ul {
+	list-style: none;
 }
