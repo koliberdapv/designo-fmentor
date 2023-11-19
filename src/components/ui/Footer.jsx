@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { Logo, Navigation, Socials } from './';
+import { CTA, Logo, Navigation, Socials } from './';
 const Footer = () => {
 	return (
 		<Wrapper>
 			<div className="width-controller">
 				<section className="footer-content">
+					<CTA />
 					<Logo />
 					<div className="divider"></div>
 					<article className="footer-content__nav">
@@ -32,6 +33,9 @@ const Footer = () => {
 const Wrapper = styled.footer`
 	background-color: var(--clr-black);
 	color: var(--clr-white);
+	position: relative;
+	margin-top: 20rem;
+	padding-top: 12rem;
 	.footer-content {
 		padding: 4rem 0;
 		display: flex;

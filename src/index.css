@@ -22,6 +22,7 @@
 	--fs-h1: 48px;
 	--fs-h2: 40px;
 	--fs-h3: 20px;
+	--fs-subtitle: 32px;
 	--fs-title: 24px;
 	--fs-p: 16px;
 	--fs-btn-p: 15px;
@@ -33,12 +34,15 @@
 
 	--lh-h1: 48px;
 	--lh-h3: 26px;
+	--lh-title: 40px;
+	--lh-subtitle: 36px;
 
 	--spacing-h2: 2px;
 	--spacing-h3: 5px;
 	--spacing-btn: 1px;
 
 	--br-regular: 8px;
+	--br-form: 15px;
 }
 
 body {

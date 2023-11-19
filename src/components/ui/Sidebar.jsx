@@ -21,6 +21,10 @@ const Wrapper = styled.dialog`
 	padding: 3rem 0;
 	border: none;
 	transition: 200ms all ease-in-out;
+	z-index: 10;
+	@media (min-width: 768px) {
+		display: none;
+	}
 	ul {
 		flex-direction: column;
 		align-items: flex-start;

@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import Figure from './Figure';
 import Socials from './Socials';
 import Sidebar from './Sidebar';
+import CTA from './CTA';
 export {
 	SharedLayout,
 	Header,
@@ -15,4 +16,5 @@ export {
 	Figure,
 	Socials,
 	Sidebar,
+	CTA,
 };
