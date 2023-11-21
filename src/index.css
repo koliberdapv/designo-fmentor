@@ -3,132 +3,129 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-	/* colors */
-	--clr-peach: hsl(11, 73%, 66%);
-	--clr-light-peach: hsl(11, 100%, 80%);
-	--clr-black: hsl(270, 4%, 11%);
-	--clr-white: hsl(0, 0%, 100%);
-	--clr-dark-gray: hsl(260, 6%, 20%);
-	--clr-light-gray: hsl(210, 15%, 95%);
+  /* colors */
+  --clr-peach: hsl(11, 73%, 66%);
+  --clr-light-peach: hsl(11, 100%, 80%);
+  --clr-black: hsl(270, 4%, 11%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-gray: hsl(260, 6%, 20%);
+  --clr-light-gray: hsl(210, 15%, 95%);
 
-	--ff-main: 'Jost', sans-serif;
+  --ff-main: 'Jost', sans-serif;
 
-	--fs-h1: 48px;
-	--fs-h2: 40px;
-	--fs-h3: 20px;
-	--fs-subtitle: 32px;
-	--fs-title: 24px;
-	--fs-p: 16px;
-	--fs-btn-p: 15px;
-	--fs-small: 14px;
+  --fs-h1: 48px;
+  --fs-h2: 40px;
+  --fs-h3: 20px;
+  --fs-subtitle: 32px;
+  --fs-title: 24px;
+  --fs-p: 16px;
+  --fs-btn-p: 15px;
+  --fs-small: 14px;
 
-	--fw-400: 400;
-	--fw-500: 500;
-	--fw-700: 700;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
 
-	--lh-h1: 48px;
-	--lh-h3: 26px;
-	--lh-title: 40px;
-	--lh-subtitle: 36px;
+  --lh-h1: 48px;
+  --lh-h3: 26px;
+  --lh-title: 40px;
+  --lh-subtitle: 36px;
 
-	--spacing-h2: 2px;
-	--spacing-h3: 5px;
-	--spacing-btn: 1px;
+  --spacing-h2: 2px;
+  --spacing-h3: 5px;
+  --spacing-btn: 1px;
 
-	--br-regular: 8px;
-	--br-form: 15px;
+  --br-regular: 8px;
+  --br-form: 15px;
 }
 
 body {
-	font-family: var(--ff-main);
-	color: var(--clr-black);
+  font-family: var(--ff-main);
+  color: var(--clr-black);
 }
 
 .h1 {
-	font-size: var(--fs-h1);
-	font-weight: var(--fw-500);
-	line-height: var(--lh-h1);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-500);
+  line-height: var(--lh-h1);
 }
 
 .h2 {
-	font-size: var(--fs-h2);
-	font-weight: var(--fw-500);
-	line-height: var(--lh-h1);
-	letter-spacing: var(--spacing-h2);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-500);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--spacing-h2);
 }
 
 .h3 {
-	font-size: var(--fs-h3);
-	font-weight: var(--fw-500);
-	line-height: var(--lh-h3);
-	letter-spacing: var(--spacing-h3);
-	text-transform: uppercase;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-500);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--spacing-h3);
+  text-transform: uppercase;
 }
-
 p {
-	font-size: var(--fs-p);
-	font-weight: var(--fw-400);
-	line-height: var(--lh-h3);
+  font-size: var(--fs-p);
+  font-weight: var(--fw-400);
+  line-height: var(--lh-h3);
 }
-
 .btn-p {
-	font-size: var(--fs-btn-p);
-	font-weight: var(--fw-500);
-	line-height: normal;
-	letter-spacing: var(--spacing-btn);
-	text-transform: uppercase;
+  font-size: var(--fs-btn-p);
+  font-weight: var(--fw-500);
+  line-height: normal;
+  letter-spacing: var(--spacing-btn);
+  text-transform: uppercase;
 }
-
 .btn {
-	border-radius: var(--br-regular);
-	padding: 1.25rem 1.35rem;
-	background-color: var(--clr-white);
-	border: none;
-	transition: all 200ms ease-in;
+  border-radius: var(--br-regular);
+  padding: 1.25rem 1.35rem;
+  background-color: var(--clr-white);
+  border: none;
+  transition: all 200ms ease-in;
 }
 .btn-light {
-	background-color: var(--clr-peach);
-	color: var(--clr-white);
+  background-color: var(--clr-peach);
+  color: var(--clr-white);
 }
 .btn:hover {
-	cursor: pointer;
-	background-color: var(--clr-light-peach);
-	color: var(--clr-white);
+  cursor: pointer;
+  background-color: var(--clr-light-peach);
+  color: var(--clr-white);
 }
 .display-none {
-	display: none;
+  display: none;
 }
 .width-controller {
-	max-width: calc(1111px + 5.25rem);
-	margin: 0 auto;
-	padding: 0 1.5rem;
+  max-width: calc(1111px + 5.25rem);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 @media screen and (width > 768px) {
-	.width-controller {
-		padding: 0 2.625rem;
-	}
+  .width-controller {
+    padding: 0 2.625rem;
+  }
 }
 .img-container {
-	width: 100%;
-	display: grid;
-	place-items: center;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 img {
-	width: 100%;
+  width: 100%;
 }
 a {
-	color: var(--clr-black);
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: var(--spacing-h2);
-	font-size: var(--fs-small);
+  color: var(--clr-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing-h2);
+  font-size: var(--fs-small);
 }
 ul {
-	list-style: none;
+  list-style: none;
 }
