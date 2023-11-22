@@ -28,6 +28,8 @@ const CTA = () => {
 const Wrapper = styled.article`
   transform: translateY(50%);
   z-index: 2;
+  isolation: isolate;
+  overflow: hidden;
   .cta-container {
     position: relative;
     display: grid;
@@ -39,6 +41,7 @@ const Wrapper = styled.article`
     text-align: center;
     gap: 1.625rem;
     isolation: isolate;
+    overflow: hidden;
   }
   .cta-container::before {
     content: '';
@@ -53,7 +56,6 @@ const Wrapper = styled.article`
     background-position: 100% 50%;
     background-size: 75%;
     background-size: cover;
-
     z-index: -1;
   }
   .cta-container__info {
@@ -70,13 +72,13 @@ const Wrapper = styled.article`
   .cta-btn {
     justify-self: center;
   }
-  .cta-btn:hover a {
-    color: var(--clr-white);
-    transition: 200ms all ease-in-out;
-  }
   @media screen and (width < 768px) {
     p {
       font-size: var(--fs-btn-p);
+    }
+    .cta-container::before {
+      right: 0rem;
+      background-size: 250%;
     }
   }
   @media screen and (width > 768px) {

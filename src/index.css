@@ -96,7 +96,10 @@ p {
 .btn:hover {
   cursor: pointer;
   background-color: var(--clr-light-peach);
+}
+.btn:hover a {
   color: var(--clr-white);
+  transition: 200ms all ease-in-out;
 }
 .display-none {
   display: none;
