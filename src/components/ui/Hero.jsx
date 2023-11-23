@@ -95,6 +95,35 @@ const Wrapper = styled.main`
     background-repeat: no-repeat;
     background-position: 50% 15%;
   }
+  @media screen and (width > 1024px) {
+    .hero-content {
+      grid-template-columns: 480px 1fr;
+      padding: 9.5rem 5.9375rem;
+    }
+    .hero-content__info {
+      text-align: left;
+      justify-content: flex-start;
+    }
+    header,
+    .p {
+      margin-inline: 0;
+    }
+    .p {
+      margin-bottom: 2.5rem;
+    }
+    .hero-content__img {
+      height: 200%;
+      width: 150%;
+    }
+    .hero-content::before {
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 55%;
+      background-position: 105% 50%;
+    }
+  }
 `;
 
 export default Hero;
