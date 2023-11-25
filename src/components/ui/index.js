@@ -7,14 +7,18 @@ import Figure from './Figure';
 import Socials from './Socials';
 import Sidebar from './Sidebar';
 import CTA from './CTA';
+import ProjectsNavigation from './ProjectsNavigation';
+import Hero from './Hero';
 export {
-	SharedLayout,
-	Header,
-	Footer,
-	Logo,
-	Navigation,
-	Figure,
-	Socials,
-	Sidebar,
-	CTA,
+  SharedLayout,
+  Hero,
+  Header,
+  Footer,
+  Logo,
+  Navigation,
+  Figure,
+  Socials,
+  Sidebar,
+  ProjectsNavigation,
+  CTA,
 };

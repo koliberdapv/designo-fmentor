@@ -17,9 +17,9 @@ const Hero = () => {
               fully responsive websites, app design, and engaging brand
               experiences. Find out more about our services.
             </p>
-            <button className="cta-btn btn">
-              <Link to="/about">learn more</Link>
-            </button>
+            <Link to="/about" className="cta-btn btn">
+              learn more
+            </Link>
           </article>
           <figure className="hero-content__img img-container"></figure>
         </div>
@@ -41,6 +41,9 @@ const Wrapper = styled.main`
     padding: 3.75rem 3.625rem 0;
     overflow: hidden;
     isolation: isolate;
+  }
+  .hero-content__info {
+    display: grid;
   }
   .p {
     max-width: 446px;
@@ -64,6 +67,9 @@ const Wrapper = styled.main`
     background-size: 70%;
     background-position: 100% 50%;
     z-index: -1;
+  }
+  a {
+    margin-inline: auto;
   }
   @media screen and (width < 768px) {
     header {
@@ -104,6 +110,10 @@ const Wrapper = styled.main`
       text-align: left;
       justify-content: flex-start;
     }
+    a {
+      margin-inline: 0;
+      margin-right: auto;
+    }
     header,
     .p {
       margin-inline: 0;
@@ -120,8 +130,10 @@ const Wrapper = styled.main`
       right: 0;
       width: 100%;
       height: 100%;
+      rotate: 90deg;
       background-size: 55%;
-      background-position: 105% 50%;
+      background-position: 50% 50%;
+      transform: translateY(-37%);
     }
   }
 `;

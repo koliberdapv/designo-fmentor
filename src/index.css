@@ -23,6 +23,7 @@
   --fs-h2: 40px;
   --fs-h3: 20px;
   --fs-subtitle: 32px;
+  --fs-h4: 28px;
   --fs-title: 24px;
   --fs-p: 16px;
   --fs-btn-p: 15px;
@@ -39,6 +40,7 @@
 
   --spacing-h2: 2px;
   --spacing-h3: 5px;
+  --spacing-h4: 1.4px;
   --spacing-btn: 1px;
 
   --br-regular: 8px;
