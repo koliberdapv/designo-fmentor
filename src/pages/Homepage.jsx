@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { Hero, ProjectsNavigation } from '../components/ui/';
+import { CompanyInfo, Hero, ProjectsNavigation } from '../components/ui/';
 
 const Homepage = () => {
   return (
     <Wrapper>
       <Hero />
       <ProjectsNavigation />
+      <CompanyInfo />
     </Wrapper>
   );
 };

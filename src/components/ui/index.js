@@ -9,6 +9,7 @@ import Sidebar from './Sidebar';
 import CTA from './CTA';
 import ProjectsNavigation from './ProjectsNavigation';
 import Hero from './Hero';
+import CompanyInfo from './CompanyInfo';
 export {
   SharedLayout,
   Hero,
@@ -20,5 +21,6 @@ export {
   Socials,
   Sidebar,
   ProjectsNavigation,
+  CompanyInfo,
   CTA,
 };
