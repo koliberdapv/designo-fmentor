@@ -10,6 +10,7 @@ import CTA from './CTA';
 import ProjectsNavigation from './ProjectsNavigation';
 import Hero from './Hero';
 import CompanyInfo from './CompanyInfo';
+import DesignPageHeader from './DesignPageHeader';
 export {
   SharedLayout,
   Hero,
@@ -23,4 +24,5 @@ export {
   ProjectsNavigation,
   CompanyInfo,
   CTA,
+  DesignPageHeader,
 };

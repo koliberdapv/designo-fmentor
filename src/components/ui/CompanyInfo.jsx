@@ -124,7 +124,7 @@ const Wrapper = styled.section`
       aspect-ratio: 1/1;
       background: url(${bg_leaf}) no-repeat;
       transform: rotate(180deg);
-      z-index: -2;
+      z-index: -3;
     }
     .description {
       align-content: flex-start;

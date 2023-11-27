@@ -11,7 +11,7 @@ import bg_web_design_mob from '../../assets/home/mobile/image-web-design.jpg';
 import bg_app_design_mob from '../../assets/home/mobile/image-app-design.jpg';
 import bg_graphic_design_mob from '../../assets/home/mobile/image-graphic-design.jpg';
 
-const ProjectsNavigation = () => {
+const ProjectsNavigation = ({ pageName }) => {
   const list = [
     {
       name: 'web design',
@@ -31,6 +31,7 @@ const ProjectsNavigation = () => {
       <div className="width-controller">
         <nav className="nav-content">
           {list.map((item, index) => {
+            if (item.name === pageName) return;
             return (
               <Link
                 to={item.path}
@@ -88,6 +89,7 @@ const Wrapper = styled.section`
     position: relative;
     isolation: isolate;
     overflow: hidden;
+    z-index: 1;
   }
   [data-content]:before {
     content: '';
