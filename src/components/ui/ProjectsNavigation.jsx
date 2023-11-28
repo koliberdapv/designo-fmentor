@@ -30,12 +30,23 @@ const ProjectsNavigation = ({ pageName }) => {
     <Wrapper>
       <div className="width-controller">
         <nav className="nav-content">
+          {/* Render the navigation links */}
           {list.map((item, index) => {
-            if (item.name === pageName) return;
+            // Skip rendering the current page's link
+            if (item.name === pageName) return null;
+            // Determine the class name based on the pageName and item.name
+            const className = `nav-content__item ${
+              // Define a variable called 'className' and assign it a string value
+              pageName !== 'app design' && // Check if the value of 'pageName' is not equal to 'app design'
+              pageName !== 'graphic design' && // Check if the value of 'pageName' is not equal to 'graphic design'
+              item.name === 'web design' // Check if the value of 'item.name' is equal to 'web design'
+                ? 'span_2' // If all the conditions above are true, assign the string 'span_2' to 'className'
+                : '' // If any of the conditions above are false, assign an empty string to 'className'
+            }`;
             return (
               <Link
                 to={item.path}
-                className="nav-content__item"
+                className={className}
                 key={index}
                 data-content={item.name}
               >
@@ -170,14 +181,16 @@ const Wrapper = styled.section`
     }
     [data-content='web design'] {
       background-image: url(${bg_web_design_desk});
-      grid-row: span 2;
-      height: 100%;
     }
     [data-content='app design'] {
       background-image: url(${bg_app_design_desk});
     }
     [data-content='graphic design'] {
       background-image: url(${bg_graphic_design_desk});
+    }
+    .span_2 {
+      grid-row: span 2;
+      height: 100%;
     }
   }
 `;

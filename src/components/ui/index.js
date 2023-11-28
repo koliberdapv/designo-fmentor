@@ -11,6 +11,8 @@ import ProjectsNavigation from './ProjectsNavigation';
 import Hero from './Hero';
 import CompanyInfo from './CompanyInfo';
 import DesignPageHeader from './DesignPageHeader';
+import Projects from './Projects';
+import ProjectCard from './ProjectCard';
 export {
   SharedLayout,
   Hero,
@@ -25,4 +27,6 @@ export {
   CompanyInfo,
   CTA,
   DesignPageHeader,
+  Projects,
+  ProjectCard,
 };

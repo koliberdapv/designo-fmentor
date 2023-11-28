@@ -12,6 +12,7 @@
   /* colors */
   --clr-peach: hsl(11, 73%, 66%);
   --clr-light-peach: hsl(11, 100%, 80%);
+  --clr-light-peach-card: hsl(13.84, 76.47%, 96.66%);
   --clr-black: hsl(270, 4%, 11%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-dark-gray: hsl(260, 6%, 20%);
