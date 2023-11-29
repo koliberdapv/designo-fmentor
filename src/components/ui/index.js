@@ -13,6 +13,7 @@ import CompanyInfo from './CompanyInfo';
 import DesignPageHeader from './DesignPageHeader';
 import Projects from './Projects';
 import ProjectCard from './ProjectCard';
+import AboutUsHeader from './AboutUsHeader';
 export {
   SharedLayout,
   Hero,
@@ -29,4 +30,5 @@ export {
   DesignPageHeader,
   Projects,
   ProjectCard,
+  AboutUsHeader,
 };

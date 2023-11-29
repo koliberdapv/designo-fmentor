@@ -1,7 +1,17 @@
 import styled from 'styled-components';
+import { AboutUsHeader } from '../components/ui';
+import { useEffect } from 'react';
+import scrollToTop from '../utils/scrollToTop';
 
 const About = () => {
-  return <Wrapper></Wrapper>;
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+  return (
+    <Wrapper>
+      <AboutUsHeader />
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section``;

@@ -53,7 +53,7 @@ const Wrapper = styled.header`
       display: none;
     }
   }
-  @media (width > 768px) {
+  @media (width >= 768px) {
     .header-content {
       padding: 4.375rem 0;
     }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Figure = ({ images }) => {
-  const [mobile, tablet, desktop, name] = images;
+  const { mobile, tablet, desktop, name } = images;
   return (
     <Wrapper>
       <img src={mobile} alt={name} data-resolution="mobile" />
@@ -12,13 +12,14 @@ const Figure = ({ images }) => {
 };
 
 const Wrapper = styled.figure`
+  display: grid;
   [data-resolution='tablet'] {
     display: none;
   }
   [data-resolution='desktop'] {
     display: none;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     [data-resolution='mobile'] {
       display: none;
     }
@@ -29,7 +30,7 @@ const Wrapper = styled.figure`
       display: none;
     }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 686px) {
     [data-resolution='mobile'] {
       display: none;
     }
