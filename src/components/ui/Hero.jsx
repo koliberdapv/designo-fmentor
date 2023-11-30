@@ -17,7 +17,7 @@ const Hero = () => {
               fully responsive websites, app design, and engaging brand
               experiences. Find out more about our services.
             </p>
-            <Link to="/about" className="cta-btn btn">
+            <Link to="/about-us" className="cta-btn btn">
               learn more
             </Link>
           </article>

@@ -1,25 +1,25 @@
 import styled from 'styled-components';
-import image_about_hero_mobile from '../../assets/about/mobile/image-about-hero.jpg';
-import image_about_hero_tablet from '../../assets/about/tablet/image-about-hero.jpg';
-import image_about_hero_desktop from '../../assets/about/desktop/image-about-hero.jpg';
 import pattern_mobile from '../../assets/about/mobile/bg-pattern-hero-about-mobile.svg';
 import pattern_desktop from '../../assets/about/desktop/bg-pattern-hero-about-desktop.svg';
+import image_real_deal_mobile from '../../assets/about/mobile/image-real-deal.jpg';
+import image_real_deal_tablet from '../../assets/about/tablet/image-real-deal.jpg';
+import image_real_deal_desktop from '../../assets/about/desktop/image-real-deal.jpg';
+// import image_talent_mobile from '../../assets/about/mobile/image-world-class-talent.jpg';
+// import image_talent_tablet from '../../assets/about/tablet/image-world-class-talent.jpg';
+// import image_talent_desktop from '../../assets/about/desktop/image-world-class-talent.jpg';
 
-const AboutUsHeader = () => {
+const AboutInfo = ({ info }) => {
+  const { title, text } = info;
   return (
     <Wrapper>
       <div className="width-controller">
-        <div className="header-content">
-          <div className="img-container" />
+        <div className="info-content">
+          <div className="img-container" data-type={title} />
           <div className="text-container">
-            <h1 className="h1">About Us</h1>
-            <p>
-              Founded in 2010, we are a creative agency that produces lasting
-              results for our clients. We've partnered with many startups,
-              corporations, and nonprofits alike to craft designs that make real
-              impact. We're always looking forward to creating brands, products,
-              and digital experiences that connect with our clients' audiences.
-            </p>
+            <h1 className="h1">{title}</h1>
+            {text.map((paragraph, index) => {
+              return <p key={index}>{paragraph}</p>;
+            })}
           </div>
         </div>
       </div>
@@ -27,8 +27,8 @@ const AboutUsHeader = () => {
   );
 };
 
-const Wrapper = styled.header`
-  .header-content {
+const Wrapper = styled.article`
+  .info-content {
     display: grid;
     grid-template-columns: 1fr;
     overflow: hidden;
@@ -40,7 +40,7 @@ const Wrapper = styled.header`
     justify-items: center;
     text-align: center;
     padding: 5rem 1.5rem;
-    background-color: var(--clr-peach);
+    background-color: var(--clr-light-peach);
     color: var(--clr-white);
     gap: 1.5rem;
     position: relative;
@@ -60,7 +60,7 @@ const Wrapper = styled.header`
   .img-container {
     width: 100%;
     height: 320px;
-    background-image: url(${image_about_hero_mobile});
+    background-image: url(${image_real_deal_mobile});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,11 +80,11 @@ const Wrapper = styled.header`
   }
   @media screen and (width > 500px) {
     .img-container {
-      background-image: url(${image_about_hero_tablet});
+      background-image: url(${image_real_deal_tablet});
     }
   }
   @media screen and (width >= 768px) {
-    .header-content {
+    .info-content {
       border-radius: var(--br-form);
     }
     .text-container {
@@ -96,9 +96,9 @@ const Wrapper = styled.header`
     .img-container {
       width: 100%;
       height: 320px;
-      background-image: url(${image_about_hero_desktop});
+      background-image: url(${image_real_deal_desktop});
     }
-    .header-content {
+    .info-content {
       grid-template-columns: 60% 40%;
     }
     .img-container {
@@ -126,4 +126,4 @@ const Wrapper = styled.header`
     }
   }
 `;
-export default AboutUsHeader;
+export default AboutInfo;
