@@ -4,19 +4,21 @@ import pattern_desktop from '../../assets/about/desktop/bg-pattern-hero-about-de
 import image_real_deal_mobile from '../../assets/about/mobile/image-real-deal.jpg';
 import image_real_deal_tablet from '../../assets/about/tablet/image-real-deal.jpg';
 import image_real_deal_desktop from '../../assets/about/desktop/image-real-deal.jpg';
-// import image_talent_mobile from '../../assets/about/mobile/image-world-class-talent.jpg';
-// import image_talent_tablet from '../../assets/about/tablet/image-world-class-talent.jpg';
-// import image_talent_desktop from '../../assets/about/desktop/image-world-class-talent.jpg';
+import image_talent_mobile from '../../assets/about/mobile/image-world-class-talent.jpg';
+import image_talent_tablet from '../../assets/about/tablet/image-world-class-talent.jpg';
+import image_talent_desktop from '../../assets/about/desktop/image-world-class-talent.jpg';
+import pattern_3_circles from '../../assets/shared/desktop/bg-pattern-three-circles.svg';
+import pattern_2_circles from '../../assets/shared/desktop/bg-pattern-two-circles.svg';
 
 const AboutInfo = ({ info }) => {
-  const { title, text } = info;
+  const { title, text, dataType } = info;
   return (
     <Wrapper>
       <div className="width-controller">
-        <div className="info-content">
-          <div className="img-container" data-type={title} />
+        <div className={`info-content ${dataType}`}>
+          <div className="img-container" data-type={dataType} />
           <div className="text-container">
-            <h1 className="h1">{title}</h1>
+            <h2 className="h2">{title}</h2>
             {text.map((paragraph, index) => {
               return <p key={index}>{paragraph}</p>;
             })}
@@ -28,6 +30,7 @@ const AboutInfo = ({ info }) => {
 };
 
 const Wrapper = styled.article`
+  margin-top: 5rem;
   .info-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -40,8 +43,7 @@ const Wrapper = styled.article`
     justify-items: center;
     text-align: center;
     padding: 5rem 1.5rem;
-    background-color: var(--clr-light-peach);
-    color: var(--clr-white);
+    background-color: var(--clr-light-peach-card);
     gap: 1.5rem;
     position: relative;
     isolation: isolate;
@@ -49,27 +51,35 @@ const Wrapper = styled.article`
   .text-container::before {
     content: '';
     position: absolute;
-    width: 225%;
+    width: 150%;
     aspect-ratio: 1/1;
-    background-image: url(${pattern_mobile});
+    background-image: url(${pattern_3_circles});
     background-size: contain;
-    top: -20%;
-    left: -110%;
+    top: 0%;
+    left: 0;
     z-index: -2;
   }
   .img-container {
     width: 100%;
     height: 320px;
-    background-image: url(${image_real_deal_mobile});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+  [data-type='talent'] {
+    background-image: url(${image_talent_mobile});
+  }
+  [data-type='real-deal'] {
+    background-image: url(${image_real_deal_mobile});
+  }
+  .h2 {
+    color: var(--clr-peach);
   }
   @media screen and (width < 768px) {
     .width-controller {
       padding: 0;
     }
-    .h1 {
+    .h2 {
       font-size: var(--fs-subtitle);
       line-height: var(--lh-subtitle);
     }
@@ -79,8 +89,12 @@ const Wrapper = styled.article`
     }
   }
   @media screen and (width > 500px) {
-    .img-container {
+    [data-type='real-deal'] {
       background-image: url(${image_real_deal_tablet});
+    }
+
+    [data-type='talent'] {
+      background-image: url(${image_talent_tablet});
     }
   }
   @media screen and (width >= 768px) {
@@ -88,14 +102,27 @@ const Wrapper = styled.article`
       border-radius: var(--br-form);
     }
     .text-container {
-      gap: 2rem;
-      padding: 4rem 3.625rem;
+      padding: 4.25rem 3.625rem;
+    }
+    .text-container::before {
+      width: 80%;
+      top: -30%;
+      left: 10%;
+    }
+    .h2 {
+      font-size: var(--fs-h2);
+      letter-spacing: normal;
     }
   }
   @media screen and (width > 1024px) {
     .img-container {
       width: 100%;
       height: 320px;
+    }
+    [data-type='talent'] {
+      background-image: url(${image_talent_desktop});
+    }
+    [data-type='real-deal'] {
       background-image: url(${image_real_deal_desktop});
     }
     .info-content {
@@ -104,25 +131,31 @@ const Wrapper = styled.article`
     .img-container {
       order: 2;
       height: 100%;
-      width: unset;
       aspect-ratio: 1/1;
+      background-size: cover;
     }
     .text-container {
       text-align: left;
       justify-items: flex-start;
-      padding: 8.4375rem 0 8.4375rem 5.9375rem;
       padding: 8.4375rem 5.9375rem;
     }
     p {
-      max-width: 458px;
+      max-width: 455px;
     }
     .text-container::before {
       width: 100%;
-      aspect-ratio: 1/2;
-      background-image: url(${pattern_desktop});
-      background-size: 85%;
-      top: -15%;
-      left: 15%;
+      aspect-ratio: 1/1;
+      background-image: url(${pattern_2_circles});
+      background-size: 80%;
+      background-repeat: no-repeat;
+      top: 55%;
+      left: 0%;
+    }
+    .talent .img-container {
+      order: -1;
+    }
+    .talent {
+      grid-template-columns: 40% 60%;
     }
   }
 `;
