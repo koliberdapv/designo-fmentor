@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AboutInfo, AboutUsHeader } from '../components/ui';
+import { AboutInfo, AboutUsHeader, LocationsNav } from '../components/ui';
 import { useEffect } from 'react';
 import scrollToTop from '../utils/scrollToTop';
 
@@ -31,11 +31,20 @@ const About = () => {
     <Wrapper>
       <AboutUsHeader />
       <AboutInfo info={infoItems.talent} />
+      <LocationsNav />
       <AboutInfo info={infoItems.realDeal} />
     </Wrapper>
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  display: grid;
+  @media screen and (width >= 768px) {
+    gap: 7.5rem;
+  }
+  @media screen and (width >= 1024px) {
+    gap: 10rem;
+  }
+`;
 
 export default About;

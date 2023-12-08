@@ -30,7 +30,6 @@ const AboutInfo = ({ info }) => {
 };
 
 const Wrapper = styled.article`
-  margin-top: 5rem;
   .info-content {
     display: grid;
     grid-template-columns: 1fr;
