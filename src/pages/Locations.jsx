@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import { LocationItem, LocationsNav } from '../components/ui';
 
 const Locations = () => {
-  return <Wrapper></Wrapper>;
+  return (
+    <Wrapper>
+      <LocationItem />
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section``;
