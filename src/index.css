@@ -66,7 +66,6 @@ body {
   line-height: var(--lh-h1);
   letter-spacing: var(--spacing-h2);
 }
-
 .h3 {
   font-size: var(--fs-h3);
   font-weight: var(--fw-500);
@@ -78,6 +77,18 @@ p {
   font-size: var(--fs-p);
   font-weight: var(--fw-400);
   line-height: var(--lh-h3);
+}
+@media screen and (width < 768px) {
+  .p-light {
+    font-size: var(--fs-p);
+    font-weight: var(--fw-400);
+    line-height: var(--lh-h3);
+  }
+}
+.subtitle {
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-500);
+  line-height: var(--lh-subtitle);
 }
 .btn-p {
   font-size: var(--fs-btn-p);
@@ -113,9 +124,14 @@ p {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-@media screen and (width > 768px) {
+@media screen and (width >= 768px) {
   .width-controller {
     padding: 0 2.625rem;
+  }
+}
+@media screen and (width < 768px) {
+  .restricted {
+    padding: 0;
   }
 }
 .img-container {

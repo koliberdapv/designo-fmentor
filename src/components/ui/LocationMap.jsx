@@ -1,21 +1,15 @@
 import styled from 'styled-components';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import { Marker, Popup } from 'react-leaflet';
-const LocationMap = () => {
-  const position = [43.644544255510866, -79.39427856551758];
-
+const LocationMap = ({ coordinates }) => {
   return (
     <Wrapper>
-      <MapContainer
-        center={[43.644544255510866, -79.39427856551758]}
-        zoom={12}
-        scrollWheelZoom={false}
-      >
+      <MapContainer center={coordinates} zoom={11} scrollWheelZoom={false}>
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position}>
+        <Marker position={coordinates}>
           <Popup>
             We are here! <br /> Come visit us.
           </Popup>
@@ -25,13 +19,18 @@ const LocationMap = () => {
   );
 };
 
-const Wrapper = styled.section`
-  width: 30rem;
-  height: 30rem;
+const Wrapper = styled.article`
+  height: 320px;
+  width: 100vw;
   display: grid;
-  margin: 0 auto;
-  #map {
-    height: 300px;
+  @media screen and (width >= 768px) {
+    height: 326px;
+    width: calc(100vw - (2.625rem * 2));
+    border-radius: var(--br-form);
+    overflow: hidden;
+  }
+  @media screen and (width >= 1024px) {
+    width: 350px;
   }
 `;
 
