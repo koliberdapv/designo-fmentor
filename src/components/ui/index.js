@@ -20,6 +20,8 @@ import Test from './Test';
 import LocationItem from './LocationItem';
 import LocationMap from './LocationMap';
 import LocationInfo from './LocationInfo';
+import ContactInfoForm from './ContactInfoForm';
+import ContactForm from './ContactForm';
 export {
   SharedLayout,
   Hero,
@@ -43,4 +45,6 @@ export {
   LocationItem,
   LocationMap,
   LocationInfo,
+  ContactInfoForm,
+  ContactForm,
 };

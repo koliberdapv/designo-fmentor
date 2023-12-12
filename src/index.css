@@ -80,9 +80,9 @@ p {
 }
 @media screen and (width < 768px) {
   .p-light {
-    font-size: var(--fs-p);
+    font-size: var(--fs-btn-p);
     font-weight: var(--fw-400);
-    line-height: var(--lh-h3);
+    line-height: var(--lh-btn-p);
   }
 }
 .subtitle {
