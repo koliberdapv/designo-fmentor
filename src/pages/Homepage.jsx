@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CompanyInfo, Hero, ProjectsNavigation } from '../components/ui/';
+import { CTA, CompanyInfo, Hero, ProjectsNavigation } from '../components/ui/';
 import { useEffect } from 'react';
 import scrollToTop from '../utils/scrollToTop';
 

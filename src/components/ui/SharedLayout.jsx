@@ -1,14 +1,17 @@
 import { CTA, Footer, Header } from './';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const SharedLayout = () => {
+const SharedLayout = ({}) => {
   return (
     <Wrapper>
       <Header />
       <Outlet />
       <CTA />
       <Footer />
+      <ToastContainer />
     </Wrapper>
   );
 };

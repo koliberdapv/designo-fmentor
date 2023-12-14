@@ -4,7 +4,7 @@ import background from '../../assets/shared/desktop/bg-pattern-call-to-action.sv
 
 const CTA = () => {
   return (
-    <Wrapper>
+    <Wrapper data-type="CTA">
       <div className="width-controller">
         <div className="cta-container">
           <div className="cta-container__info">
