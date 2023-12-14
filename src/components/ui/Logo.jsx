@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo_light from '../../assets/shared/desktop/logo-light.png';
 import logo_dark from '../../assets/shared/desktop/logo-dark.png';
+
 const Logo = ({ isDark }) => {
 	return (
 		<Wrapper className="logo">

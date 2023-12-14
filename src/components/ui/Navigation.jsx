@@ -42,6 +42,7 @@ const Navigation = ({ isFooter }) => {
 };
 
 const Wrapper = styled.ul`
+	z-index: 999;
 	display: flex;
 	align-items: center;
 	gap: 2.625rem;

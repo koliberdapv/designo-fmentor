@@ -14,6 +14,7 @@ const Sidebar = () => {
 };
 
 const Wrapper = styled.dialog`
+	z-index: 999 !important;
 	top: 96px;
 	left: 0;
 	width: 100%;
