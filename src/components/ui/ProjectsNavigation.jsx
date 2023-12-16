@@ -111,27 +111,28 @@ const Wrapper = styled.section`
     height: 100%;
     z-index: -2;
     background-color: var(--clr-black);
-    opacity: 0.4;
+    opacity: 0.2;
+    transition: 200ms all ease-in-out;
   }
   [data-content]::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 200%;
     height: 100%;
     z-index: -1;
     background-color: var(--clr-peach);
-    opacity: 0.7;
-    visibility: hidden;
+    opacity: 0;
+    transition: transform 350ms ease-in-out, opacity 250ms ease-in-out;
   }
   [data-content]:hover::after,
   [data-content]:focus::after {
-    visibility: visible;
+    opacity: 0.7;
   }
   [data-content]:hover::before,
   [data-content]:focus::before {
-    visibility: hidden;
+    opacity: 0;
   }
   p {
     font-size: var(--fs-btn-p);
