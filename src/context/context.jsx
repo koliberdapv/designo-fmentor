@@ -4,43 +4,45 @@ import scrollToTop from '../utils/scrollToTop';
 const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-	const toggleSidebar = () => {
-		const sidebar = document.getElementById('sidebar');
-		if (isSidebarOpen) {
-			sidebar.show();
-			return;
-		}
-		sidebar.close();
-	};
+  const toggleSidebar = () => {
+    const sidebar = document.getElementById('sidebar');
+    if (isSidebarOpen) {
+      sidebar.inert = true;
+      sidebar.show();
+      sidebar.inert = false;
+      return;
+    }
+    sidebar.close();
+  };
 
-	const handleMenuBtnClick = () => {
-		setIsSidebarOpen(!isSidebarOpen);
-	};
+  const handleMenuBtnClick = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
-	useEffect(() => {
-		toggleSidebar();
-	}, [isSidebarOpen]);
+  useEffect(() => {
+    toggleSidebar();
+  }, [isSidebarOpen]);
 
-	useEffect(() => {
-		scrollToTop();
-	}, []);
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
-	return (
-		<AppContext.Provider
-			value={{
-				isSidebarOpen,
-				setIsSidebarOpen,
-				toggleSidebar,
-				handleMenuBtnClick,
-			}}
-		>
-			{children}
-		</AppContext.Provider>
-	);
+  return (
+    <AppContext.Provider
+      value={{
+        isSidebarOpen,
+        setIsSidebarOpen,
+        toggleSidebar,
+        handleMenuBtnClick,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 export const useGlobalContext = () => {
-	return useContext(AppContext);
+  return useContext(AppContext);
 };

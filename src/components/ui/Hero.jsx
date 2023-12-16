@@ -71,6 +71,10 @@ const Wrapper = styled.main`
   a {
     margin-inline: auto;
   }
+  .cta-btn:hover,
+  .cta-btn:focus {
+    color: var(--clr-white);
+  }
   @media screen and (width < 768px) {
     header {
       font-size: var(--fs-subtitle);

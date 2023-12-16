@@ -1,4 +1,4 @@
-import { CTA, Footer, Header } from './';
+import { Footer, Header } from './';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import { ToastContainer } from 'react-toastify';

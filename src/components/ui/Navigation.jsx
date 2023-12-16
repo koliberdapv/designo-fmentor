@@ -45,8 +45,8 @@ const Wrapper = styled.ul`
   gap: 2.625rem;
   a:focus,
   a:hover {
-    color: var(--clr-peach);
     transition: 200ms all ease-in-out;
+    box-shadow: inset 0 -1px 0 hsl(270, 4%, 11%, 0.5);
   }
 `;
 

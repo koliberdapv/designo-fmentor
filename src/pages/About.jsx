@@ -1,11 +1,5 @@
 import styled from 'styled-components';
-import {
-  AboutInfo,
-  AboutUsHeader,
-  CTA,
-  LocationsNav,
-  Test,
-} from '../components/ui';
+import { AboutInfo, AboutUsHeader, CTA, LocationsNav } from '../components/ui';
 import { useEffect } from 'react';
 import scrollToTop from '../utils/scrollToTop';
 import { useGlobalContext } from '../context/context';

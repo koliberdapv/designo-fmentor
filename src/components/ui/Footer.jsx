@@ -56,17 +56,22 @@ const Wrapper = styled.footer`
     a {
       color: var(--clr-white);
     }
-  }
-  .contact a {
-    color: var(--clr-white);
-    text-transform: unset;
-    letter-spacing: unset;
-    font-size: var(--fs-p);
+    a:hover,
+    a:focus {
+      box-shadow: inset 0 -1px 0 hsl(0, 0%, 100%, 0.5);
+    }
   }
   .contact {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    a {
+      color: var(--clr-white);
+      text-transform: unset;
+      letter-spacing: unset;
+      font-size: var(--fs-p);
+    }
   }
   .footer-content__info {
     opacity: 0.5;
@@ -107,6 +112,9 @@ const Wrapper = styled.footer`
     .footer-content__info {
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-between;
+    }
+    .contact {
+      justify-content: flex-start;
     }
   }
   @media screen and (width > 1024px) {

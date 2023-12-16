@@ -16,7 +16,6 @@ import ProjectCard from './ProjectCard';
 import AboutUsHeader from './AboutUsHeader';
 import AboutInfo from './AboutInfo';
 import LocationsNav from './LocationsNav';
-import Test from './Test';
 import LocationItem from './LocationItem';
 import LocationMap from './LocationMap';
 import LocationInfo from './LocationInfo';
@@ -41,7 +40,6 @@ export {
   AboutUsHeader,
   AboutInfo,
   LocationsNav,
-  Test,
   LocationItem,
   LocationMap,
   LocationInfo,

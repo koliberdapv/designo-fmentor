@@ -70,6 +70,10 @@ const Wrapper = styled.article`
   .cta-btn {
     justify-self: center;
   }
+  .cta-btn:hover,
+  .cta-btn:focus {
+    color: var(--clr-white);
+  }
   @media screen and (width < 768px) {
     p {
       font-size: var(--fs-btn-p);
