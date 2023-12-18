@@ -31,7 +31,7 @@ const LocationsNav = () => {
           {locations.map((location, index) => {
             const { name, img, link } = location;
             return (
-              <li className="nav-item" key={index}>
+              <li className="nav-item obs-item" key={index}>
                 <picture className="img-container" data-type={name}>
                   <img src={img} alt={name} />
                 </picture>

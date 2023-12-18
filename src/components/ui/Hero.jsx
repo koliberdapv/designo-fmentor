@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <div className="width-controller">
-        <div className="hero-content">
+        <div className="hero-content obs-item">
           <article className="hero-content__info">
             <header className="h1">
               Award-winning custom designs and digital branding solutions

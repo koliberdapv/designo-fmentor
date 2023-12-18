@@ -21,6 +21,27 @@ export const AppContextProvider = ({ children }) => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const smoothRender = () => {
+    const obsItems = document.querySelectorAll('.obs-item');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+    obsItems.forEach((item) => {
+      observer.observe(item);
+    });
+  };
+
   useEffect(() => {
     toggleSidebar();
   }, [isSidebarOpen]);
@@ -36,6 +57,7 @@ export const AppContextProvider = ({ children }) => {
         setIsSidebarOpen,
         toggleSidebar,
         handleMenuBtnClick,
+        smoothRender,
       }}
     >
       {children}

@@ -8,7 +8,6 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -66,7 +65,7 @@ const ContactForm = () => {
 
   return (
     <Wrapper>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="obs-item">
         <div className="form-container">
           {inputsList.map((input) => {
             const { id, defaultValue, placeholder, name, type } = input;

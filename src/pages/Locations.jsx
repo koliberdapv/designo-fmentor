@@ -5,10 +5,11 @@ import scrollToTop from '../utils/scrollToTop';
 import { useGlobalContext } from '../context/context';
 
 const Locations = () => {
-  const { setIsSidebarOpen } = useGlobalContext();
+  const { setIsSidebarOpen, smoothRender } = useGlobalContext();
   useEffect(() => {
     scrollToTop();
     setIsSidebarOpen(false);
+    smoothRender();
   }, []);
   const locationsList = [
     {

@@ -150,7 +150,15 @@ a {
 img {
   width: 100%;
 }
-
 ul {
   list-style: none;
+}
+.obs-item {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+.show {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+  transform: translateY(0);
 }

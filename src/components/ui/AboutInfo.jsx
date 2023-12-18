@@ -15,7 +15,7 @@ const AboutInfo = ({ info }) => {
   return (
     <Wrapper>
       <div className="width-controller">
-        <div className={`info-content ${dataType}`}>
+        <div className={`info-content obs-item ${dataType}`}>
           <div className="img-container" data-type={dataType} />
           <div className="text-container">
             <h2 className="h2">{title}</h2>

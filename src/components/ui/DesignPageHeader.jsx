@@ -7,7 +7,7 @@ const DesignPageHeader = ({ header }) => {
   return (
     <Wrapper>
       <div className="width-controller">
-        <div className="header-content">
+        <div className="header-content obs-item">
           <h1 className="h1">{title}</h1>
           <p>{description}</p>
         </div>

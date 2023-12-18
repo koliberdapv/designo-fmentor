@@ -4,7 +4,7 @@ const ProjectCard = ({ title, description, image }) => {
   return (
     <Wrapper>
       <Link>
-        <div className="card-content">
+        <div className="card-content obs-item">
           <div className="img-container">
             <img src={image} alt="blogr website" />
           </div>

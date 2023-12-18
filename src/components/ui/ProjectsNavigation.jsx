@@ -35,7 +35,7 @@ const ProjectsNavigation = ({ pageName }) => {
             // Skip rendering the current page's link
             if (item.name === pageName) return null;
             // Determine the class name based on the pageName and item.name
-            const className = `nav-content__item ${
+            const className = `nav-content__item obs-item ${
               // Define a variable called 'className' and assign it a string value
               pageName !== 'app design' && // Check if the value of 'pageName' is not equal to 'app design'
               pageName !== 'graphic design' && // Check if the value of 'pageName' is not equal to 'graphic design'

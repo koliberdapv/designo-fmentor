@@ -5,19 +5,20 @@ import scrollToTop from '../utils/scrollToTop';
 import { useGlobalContext } from '../context/context';
 
 const Homepage = () => {
-	const { setIsSidebarOpen } = useGlobalContext();
-	useEffect(() => {
-		scrollToTop();
-		setIsSidebarOpen(false);
-	}, []);
-	return (
-		<Wrapper>
-			<Hero />
-			<ProjectsNavigation />
-			<CompanyInfo />
-			<CTA />
-		</Wrapper>
-	);
+  const { setIsSidebarOpen, smoothRender } = useGlobalContext();
+  useEffect(() => {
+    scrollToTop();
+    setIsSidebarOpen(false);
+    smoothRender();
+  }, []);
+  return (
+    <Wrapper>
+      <Hero />
+      <ProjectsNavigation />
+      <CompanyInfo />
+      <CTA />
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section``;

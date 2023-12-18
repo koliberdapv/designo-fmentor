@@ -9,7 +9,7 @@ const AboutUsHeader = () => {
   return (
     <Wrapper>
       <div className="width-controller">
-        <div className="header-content">
+        <div className="header-content obs-item">
           <div className="img-container" />
           <div className="text-container">
             <h1 className="h1">About Us</h1>

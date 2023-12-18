@@ -5,7 +5,7 @@ const LocationItem = ({ location }) => {
   return (
     <Wrapper id={location.name}>
       <div className="width-controller restricted">
-        <div className="item-content" data-country={location.name}>
+        <div className="item-content obs-item" data-country={location.name}>
           <LocationMap coordinates={location.coordinates} />
           <LocationInfo location={location} />
         </div>

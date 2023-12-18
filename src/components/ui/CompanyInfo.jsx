@@ -33,7 +33,7 @@ const CompanyInfo = () => {
           {infoList.map((info, index) => {
             const { title, content, img } = info;
             return (
-              <article className="info-item" key={index}>
+              <article className="info-item obs-item" key={index}>
                 <div className="img-container" data-type={title}>
                   <img src={img} alt={title} />
                 </div>
